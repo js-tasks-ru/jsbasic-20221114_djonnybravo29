@@ -1,3 +1,5 @@
 function camelize(str) {
-  // ваш код...
+  return str.split('-')
+      .map(item => (item = item.split(''), item.shift().toUpperCase() + item.join('')))
+      .join('')
 }
